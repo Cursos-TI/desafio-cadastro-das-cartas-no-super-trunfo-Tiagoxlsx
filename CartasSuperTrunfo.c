@@ -5,28 +5,44 @@
 
 // Estrutura para representar uma carta do super trunfo
 typedef struct {
-    char estado;                    // 'A' a 'H'
-    char codigo [5];                // EX:"S01", "R02" 4 caracteres + 1 para o terminador null '\0'
-    char nome[MAX_STRING_SIZE];     // Nome da Cidade
-    int populacao;                  // Numero de Habitantes 
-    float Área;                       // Área em Km
-    float PIB;                  // Produto Interno Bruto
-    int num_pontos_turisticos;      // Numero de pontos turisticos 
+    char estado;                          // 'A' a 'H'
+    char codigo [5];                      // EX:"S01", "R02" 4 caracteres + 1 para o terminador null '\0'
+    char nome[MAX_STRING_SIZE];           // Nome da Cidade
+    int populacao;                        // Numero de Habitantes 
+    float Área_km2;                       // Área em Km
+    float PIB;                            // Produto Interno Bruto
+    int num_pontos_turisticos;            // Numero de pontos turisticos 
 } Carta;
 
 void mostrarCarta(Carta c) {
-    printf("1) Estado: %c\n", c.nome);
-    printf("2) Codigo: %s\n", c.nome);
+    printf("1) Estado: %c\n", c.estado);
+    printf("2) Codigo: %s\n", c.codigo);
     printf("3) Cidade: %s\n", c.nome);
     printf("4) População: %d\n", c.populacao);
     printf("5) PIB: %.2f\n", c.PIB);
-    printf("6) Área: %.2f\n", c.Área);
+    printf("6) Área: %.2f\n", c.Área_km2);
     printf("7) num_pontos_turisticos; %d\n", c.num_pontos_turisticos);
 }
 
 int main() {
-    Carta saoPaulo = {'S',"SP01","São Paulo",12325000,699.28,1521,50};
-    Carta rio = {'R', "R02" "Rio de Janeiro", 6748000, 300.50,1200.25, 30};
+    // Iniciar da Carta 'saoPaulo' com os valores corretos 
+    Carta saoPaulo = {
+    'S',                                // estado (char)
+    "SP01",                             // codigo (string)
+    "São Paulo",                        // nome (string)
+    12325000,                           // populacao (int)
+    699.28,                             // area_km2 (float)
+    1521,                               // pib (float)
+    50};                                // num_pontos_turisticos (int)
+    // Iniciar da Carta 'riodeJaneiro' com os valores corretos 
+    Carta rio = {
+    'R',
+    "R02",
+    "Rio de Janeiro",
+    6748000,
+    300.50,
+    1200.25,
+    30};
 
     int escolha;
 
@@ -45,8 +61,8 @@ int main() {
     mostrarCarta(rio);
 
     // Usando ponteiros para evitar repetição
-    int atributosSP[] = {saoPaulo.populacao, saoPaulo.Área,saoPaulo.PIB, saoPaulo.num_pontos_turisticos};
-    int atributosRJ[] = {rio.populacao, rio.Área,rio.PIB, rio.num_pontos_turisticos};
+    int atributosSP[] = {saoPaulo.populacao, saoPaulo.Área_km2,saoPaulo.PIB, saoPaulo.num_pontos_turisticos};
+    int atributosRJ[] = {rio.populacao, rio.Área_km2,rio.PIB, rio.num_pontos_turisticos};
 
     int valorSP = atributosSP[escolha - 1];
     int valorRJ = atributosRJ[escolha - 2];
