@@ -70,8 +70,10 @@ int main() {
     1200.25,
     30,
     0.0,
+    0.0,
     0.0
     };
+
     // -- ADIÇÃO DA LOGICA DE CALCULO --
     // Calculando e atribuindo os novos valores a primeira carta
     saoPaulo.densidade_populacional = (float)saoPaulo.populacao / saoPaulo.Área_km2;
@@ -81,13 +83,15 @@ int main() {
     rio.densidade_populacional = (float)rio.populacao / rio.Área_km2;
     rio.pib_per_capita = (rio.PIB * 1000000000) / (float)rio.populacao;
 
-
+    // Calcula e atribui o superpoder
+    saoPaulo.super_poder = calcularsuperpoder(saoPaulo);
+    rio.super_poder = calcularsuperpoder(rio);
 
     
     int escolha;
 
     printf("Sua carta:\n");
-    mostrarCarta(saoPaulo);
+    mostrarCarta(saoPaulo); 
 
     do {
         printf("Escolha o atributo para comparar (1-Populacao, 2-PIB, 3-Área 4-num_pontos_turisticos): ");
