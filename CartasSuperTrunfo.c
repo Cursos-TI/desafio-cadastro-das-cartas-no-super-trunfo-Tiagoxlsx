@@ -34,7 +34,7 @@ int main() {
     mostrarCarta(saoPaulo);
 
     do {
-        printf("Escolha o atributo para comparar (1-Peso, 2-Altura, 3-População): ");
+        printf("Escolha o atributo para comparar (1-Populacao, 2-PIB, 3-Área 4-num_pontos_turisticos): ");
         if (scanf("%d", &escolha) != 1) {
             while (getchar() != '\n'); // limpa buffer
             escolha = 0;
@@ -49,7 +49,7 @@ int main() {
     int atributosRJ[] = {rio.populacao, rio.Área,rio.PIB, rio.num_pontos_turisticos};
 
     int valorSP = atributosSP[escolha - 1];
-    int valorRJ = atributosRJ[escolha - 1];
+    int valorRJ = atributosRJ[escolha - 2];
 
     printf("\nResultado: ");
     if (valorSP > valorRJ)
