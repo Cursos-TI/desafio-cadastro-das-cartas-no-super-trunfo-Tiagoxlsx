@@ -55,13 +55,13 @@ int main() {
     0.0
     };
     // -- ADIÇÃO DA LOGICA DE CALCULO --
-    // Calculando e atribuindo os novos valores
+    // Calculando e atribuindo os novos valores a primeira carta
     saoPaulo.densidade_populacional = (float)saoPaulo.populacao / saoPaulo.Área_km2;
-    saoPaulo.pib_per_capita = saoPaulo.PIB / (float)saoPaulo.populacao;
+    saoPaulo.pib_per_capita = (saoPaulo.PIB * 1000000000) / (float)saoPaulo.populacao; // o PIB da carta esta em bilhões
 
     // Calculando e atribuindo os novos valores
     rio.densidade_populacional = (float)rio.populacao / rio.Área_km2;
-    rio.pib_per_capita = rio.PIB / (float)rio.populacao;
+    rio.pib_per_capita = (rio.PIB * 1000000000) / (float)rio.populacao;
     
     int escolha;
 
