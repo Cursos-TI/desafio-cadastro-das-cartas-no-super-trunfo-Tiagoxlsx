@@ -105,8 +105,8 @@ int main() {
     mostrarCarta(rio);
 
     // Usando ponteiros para evitar repetição
-    int atributosSP[] = {saoPaulo.populacao, saoPaulo.Área_km2,saoPaulo.PIB, saoPaulo.num_pontos_turisticos};
-    int atributosRJ[] = {rio.populacao, rio.Área_km2,rio.PIB, rio.num_pontos_turisticos};
+    int atributosSP[] = {saoPaulo.populacao, saoPaulo.Área_km2,saoPaulo.PIB, saoPaulo.num_pontos_turisticos, saoPaulo.super_poder, saoPaulo.pib_per_capita};
+    int atributosRJ[] = {rio.populacao, rio.Área_km2,rio.PIB, rio.num_pontos_turisticos, rio.super_poder, rio.pib_per_capita};
 
     int valorSP = atributosSP[escolha - 1];
     int valorRJ = atributosRJ[escolha - 2];
