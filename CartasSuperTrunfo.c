@@ -14,6 +14,7 @@ typedef struct {
     int num_pontos_turisticos;            // Numero de pontos turisticos 
     float densidade_populacional;         // Novo campo
     float pib_per_capita;                 // Novo campo
+    float super_poder;                    // Novo campo
 } Carta;
 
 void mostrarCarta(Carta c) {
@@ -26,6 +27,7 @@ void mostrarCarta(Carta c) {
     printf("7) num_pontos_turisticos; %d\n", c.num_pontos_turisticos);
     printf("8) Densidade Populacional: %.2f\n", c.densidade_populacional);
     printf("9) PIB per Capita: %.2f\n", c.pib_per_capita);
+    printf("10) super_poder: %.2f\n", c.super_poder);
 }
 
 int main() {
@@ -37,9 +39,10 @@ int main() {
     12325000,                                        // populacao (int)
     699.28,                                          // area_km2 (float)
     1521.11,                                         // pib (float)
-    50,                                             // num_pontos_turisticos (int)
+    50,                                              // num_pontos_turisticos (int)
     0.0,                                             // inicializado com 0.0, será calculado a seguir
-    0.0                                              // inicializado com 0.0, será calculado a seguir
+    0.0,                                             // inicializado com 0.0, será calculado a seguir
+    0.0                                              // inicializado com 0.0, sera calculado a seguir 
 
     };
 
