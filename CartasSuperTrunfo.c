@@ -30,6 +30,21 @@ void mostrarCarta(Carta c) {
     printf("10) super_poder: %.2f\n", c.super_poder);
 }
 
+// função para calcular super poder da carta
+float calcularsuperpoder(Carta c){
+    // A logica para o super poder pode variar.
+    //uma abordagem simples e a de alguns atributos.
+
+    // declara e atribui o valor a variavel local.
+    // a variavel 'c' e o parametro da função, então.
+    // usamos 'c.'para acessar seus atributos.
+    float superPodercalculado = c.PIB + c.populacao + c.Área_km2 + c.num_pontos_turisticos + c.pib_per_capita + c.densidade_populacional;
+    // Retorna ao valor calculado.
+
+    return superPodercalculado;
+    }
+
+
 int main() {
     // Iniciar da Carta 'saoPaulo' com os valores corretos 
     Carta saoPaulo = {
@@ -65,6 +80,9 @@ int main() {
     // Calculando e atribuindo os novos valores
     rio.densidade_populacional = (float)rio.populacao / rio.Área_km2;
     rio.pib_per_capita = (rio.PIB * 1000000000) / (float)rio.populacao;
+
+
+
     
     int escolha;
 
