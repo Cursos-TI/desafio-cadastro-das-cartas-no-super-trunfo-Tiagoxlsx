@@ -25,7 +25,7 @@ void mostrarCarta(Carta c) {
 }
 
 int main() {
-    Carta saoPaulo = {'S',"SP01","São Paulo",12325000,699.28,1521,11, 50};
+    Carta saoPaulo = {'S',"SP01","São Paulo",12325000,699.28,1521,50};
     Carta rio = {'R', "R02" "Rio de Janeiro", 6748000, 300.50,1200.25, 30};
 
     int escolha;
