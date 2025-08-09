@@ -44,6 +44,41 @@ float calcularsuperpoder(Carta c){
     return superPodercalculado;
     }
 
+    // função para comparar as cartas e exibir os resultados.
+    void compararCartas(Carta carta1,Carta carta2){
+        int resultado;
+        printf("Comparação de Cartas:\n");
+
+        // comparação da população 
+        resultado = (carta1.populacao > carta2.populacao) ? 1:0;
+        printf("População: Carta%d venceu (%d)\n", (resultado == 1) ? 1 : 2,resultado);
+
+        // comparação da Área
+        resultado = (carta1.Área_km2 > carta2.Área_km2) ? 1:0;
+        printf("Área_km2: Carta%d venceu (%d)\n", (resultado == 1) ? 1 : 2,resultado);
+
+        // comparação do PIB
+         resultado = (carta1.PIB > carta2.PIB) ? 1:0;
+         printf("PIB: Carta%d venceu (%d)\n", (resultado == 1) ? 1 : 2,resultado);
+
+         // comparação do Pontos Turisticos
+         resultado = (carta1.num_pontos_turisticos > carta2.num_pontos_turisticos) ? 1:0;
+         printf("num_pontos_turisticos: Carta%d venceu (%d)\n", (resultado == 1) ? 1 : 2,resultado);
+
+         // comparação do Densidade populacional (menor valor vence)
+         resultado = (carta1.densidade_populacional > carta2.densidade_populacional) ? 1:0;
+         printf("densidade_populacional: Carta%d venceu (%d)\n", (resultado == 1) ? 1 : 2,resultado);
+
+         //  comparação do PIB per capto
+         resultado = (carta1.pib_per_capita > carta2.pib_per_capita) ? 1:0;
+         printf("pib_per_capita: Carta%d venceu (%d)\n", (resultado == 1) ? 1 : 2,resultado);
+
+         // comparação do superpoder
+         resultado = (carta1.super_poder > carta2.super_poder) ? 1:0;
+         printf("superpoder: Carta%d venceu (%d)\n", (resultado == 1) ? 1 : 2,resultado);
+
+         }
+
 
 int main() {
     // Iniciar da Carta 'saoPaulo' com os valores corretos 
@@ -86,6 +121,10 @@ int main() {
     // Calcula e atribui o superpoder
     saoPaulo.super_poder = calcularsuperpoder(saoPaulo);
     rio.super_poder = calcularsuperpoder(rio);
+
+    // chamada da nova função para comparar todas as cartas e exibir o resultado 
+    compararCartas(saoPaulo, rio);
+
 
     
     int escolha;
