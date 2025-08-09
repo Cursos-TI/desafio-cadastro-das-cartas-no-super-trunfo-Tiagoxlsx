@@ -54,7 +54,14 @@ int main() {
     0.0,
     0.0
     };
-    
+    // -- ADIÇÃO DA LOGICA DE CALCULO --
+    // Calculando e atribuindo os novos valores
+    saoPaulo.densidade_populacional = (float)saoPaulo.populacao / saoPaulo.Área_km2;
+    saoPaulo.pib_per_capita = saoPaulo.PIB / (float)saoPaulo.populacao;
+
+    // Calculando e atribuindo os novos valores
+    rio.densidade_populacional = (float)rio.populacao / rio.Área_km2;
+    rio.pib_per_capita = rio.PIB / (float)rio.populacao;
     
     int escolha;
 
