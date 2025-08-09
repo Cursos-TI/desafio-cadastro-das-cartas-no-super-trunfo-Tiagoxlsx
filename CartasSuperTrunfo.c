@@ -15,12 +15,12 @@ typedef struct {
 } Carta;
 
 void mostrarCarta(Carta c) {
-    printf("1) Estado: %s\n", c.nome);
+    printf("1) Estado: %c\n", c.nome);
     printf("2) Codigo: %s\n", c.nome);
     printf("3) Cidade: %s\n", c.nome);
     printf("4) População: %d\n", c.populacao);
-    printf("5) PIB: %d\n", c.PIB);
-    printf("6) Área: %d\n", c.Área);
+    printf("5) PIB: %.2f\n", c.PIB);
+    printf("6) Área: %.2f\n", c.Área);
     printf("7) num_pontos_turisticos; %d\n", c.num_pontos_turisticos);
 }
 
